@@ -1,4 +1,4 @@
-export type RuleResultValue = true | string | Promise<true | string>
+export type RuleResultValue = boolean | string | Promise<boolean | string>
 
 export interface RuleFunction {
   (val: any, ...args: any[]): RuleResultValue
@@ -10,5 +10,5 @@ export interface RuleResult {
   message: string
 }
 
-// 规则集合类型
+// 锟斤拷锟津集猴拷锟斤拷锟斤拷
 export type RuleMap = Record<string, RuleFunction>

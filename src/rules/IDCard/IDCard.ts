@@ -1,9 +1,9 @@
 /*
- * @Author: ¡ùmk9007@163.com
+ * @Author: â€»mk9007@163.com
  * @Date: 2021-02-03 14:30:22
  * @LastEditTime: 2021-02-04 09:38:50
  * @FilePath: \vue-manage\src\meview-ui\libs\util\verify\IDCode.ts
- * @Description: Éí·İÖ¤ºÅÂëÑéÖ¤¹¤¾ß
+ * @Description: èº«ä»½è¯å·ç éªŒè¯å·¥å…·
  */
 
 type ErrorCode = {
@@ -16,53 +16,53 @@ type Result = ErrorCode & {
 };
 
 const areaID: Record<number, string> = {
-  11: "±±¾©",
-  12: "Ìì½ò",
-  13: "ºÓ±±",
-  14: "É½Î÷",
-  15: "ÄÚÃÉ¹Å",
-  21: "ÁÉÄş",
-  22: "¼ªÁÖ",
-  23: "ºÚÁú½­",
-  31: "ÉÏº£",
-  32: "½­ËÕ",
-  33: "Õã½­",
-  34: "°²»Õ",
-  35: "¸£½¨",
-  36: "½­Î÷",
-  37: "É½¶«",
-  41: "ºÓÄÏ",
-  42: "ºş±±",
-  43: "ºşÄÏ",
-  44: "¹ã¶«",
-  45: "¹ãÎ÷",
-  46: "º£ÄÏ",
-  50: "ÖØÇì",
-  51: "ËÄ´¨",
-  52: "¹óÖİ",
-  53: "ÔÆÄÏ",
-  54: "Î÷²Ø",
-  61: "ÉÂÎ÷",
-  62: "¸ÊËà",
-  63: "Çàº£",
-  64: "ÄşÏÄ",
-  65: "ĞÂ½®",
-  71: "Ì¨Íå",
-  81: "Ïã¸Û",
-  82: "°ÄÃÅ",
-  91: "¹úÍâ"
+  11: "åŒ—äº¬",
+  12: "å¤©æ´¥",
+  13: "æ²³åŒ—",
+  14: "å±±è¥¿",
+  15: "å†…è’™å¤",
+  21: "è¾½å®",
+  22: "å‰æ—",
+  23: "é»‘é¾™æ±Ÿ",
+  31: "ä¸Šæµ·",
+  32: "æ±Ÿè‹",
+  33: "æµ™æ±Ÿ",
+  34: "å®‰å¾½",
+  35: "ç¦å»º",
+  36: "æ±Ÿè¥¿",
+  37: "å±±ä¸œ",
+  41: "æ²³å—",
+  42: "æ¹–åŒ—",
+  43: "æ¹–å—",
+  44: "å¹¿ä¸œ",
+  45: "å¹¿è¥¿",
+  46: "æµ·å—",
+  50: "é‡åº†",
+  51: "å››å·",
+  52: "è´µå·",
+  53: "äº‘å—",
+  54: "è¥¿è—",
+  61: "é™•è¥¿",
+  62: "ç”˜è‚ƒ",
+  63: "é’æµ·",
+  64: "å®å¤",
+  65: "æ–°ç–†",
+  71: "å°æ¹¾",
+  81: "é¦™æ¸¯",
+  82: "æ¾³é—¨",
+  91: "å›½å¤–"
 };
 
 const checkCode: (string | number)[] = [1, 0, "X", 9, 8, 7, 6, 5, 4, 3, 2];
 
-const sexCode: Record<number, string> = { 0: "Å®", 1: "ÄĞ" };
+const sexCode: Record<number, string> = { 0: "å¥³", 1: "ç”·" };
 
 const errorCode: Record<string, ErrorCode> = {
-  "100000": { message: "Ğ£Ñé³É¹¦£¡", code: "100000" },
-  "-100001": { message: "ÄãÊäÈëµÄÉí·İÖ¤³¤¶È»ò¸ñÊ½´íÎó", code: "-100001" },
-  "-100002": { message: "ÄãµÄÉí·İÖ¤µØÇø·Ç·¨!", code: "-100002" },
-  "-100003": { message: "Éí·İÖ¤ÉÏµÄ³öÉúÈÕÆÚ·Ç·¨!", code: "-100003" },
-  "-100004": { message: "ÄãÊäÈëµÄÉí·İÖ¤ºÅ·Ç·¨!", code: "-100004" }
+  "100000": { message: "æ ¡éªŒæˆåŠŸï¼", code: "100000" },
+  "-100001": { message: "ä½ è¾“å…¥çš„èº«ä»½è¯é•¿åº¦æˆ–æ ¼å¼é”™è¯¯", code: "-100001" },
+  "-100002": { message: "ä½ çš„èº«ä»½è¯åœ°åŒºéæ³•!", code: "-100002" },
+  "-100003": { message: "èº«ä»½è¯ä¸Šçš„å‡ºç”Ÿæ—¥æœŸéæ³•!", code: "-100003" },
+  "-100004": { message: "ä½ è¾“å…¥çš„èº«ä»½è¯å·éæ³•!", code: "-100004" }
 };
 
 const codeReg =
@@ -73,7 +73,7 @@ function error(code: string | number): Result {
   return Object.assign(
     {
       code: "-100001",
-      message: "ÑéÖ¤Ê§°Ü",
+      message: "éªŒè¯å¤±è´¥",
       status: false
     },
     errorCode[key] || {}
@@ -84,7 +84,7 @@ function success(): Result {
   return Object.assign(
     {
       code: "100000",
-      message: "ÑéÖ¤³É¹¦",
+      message: "éªŒè¯æˆåŠŸ",
       status: true
     },
     errorCode["100000"] || {}
@@ -92,7 +92,7 @@ function success(): Result {
 }
 
 /**
- * Ğ£ÑéÉí·İÖ¤ºÅÂëÊÇ·ñºÏ·¨
+ * æ ¡éªŒèº«ä»½è¯å·ç æ˜¯å¦åˆæ³•
  */
 function IDCodeTest(idcode: string): Result {
   if (!codeReg.test(idcode)) {
@@ -155,7 +155,7 @@ class IDCard {
     return IDCard.Test(this.idcode);
   }
 
-  /** ¸ù¾İÉí·İÖ¤ºÅ»ñÈ¡ĞÔ±ğ */
+  /** æ ¹æ®èº«ä»½è¯å·è·å–æ€§åˆ« */
   sex(): string {
     if (this.idcode.length === 15) {
       return sexCode[parseInt(this.idcode.substring(14, 15)) % 2];
@@ -166,7 +166,7 @@ class IDCard {
     }
   }
 
-  /** ¸ù¾İÉí·İÖ¤ºÅ»ñÈ¡ÉúÈÕ */
+  /** æ ¹æ®èº«ä»½è¯å·è·å–ç”Ÿæ—¥ */
   birthday(): string {
     let birthStr = "";
     if (this.idcode.length === 15) {
@@ -189,12 +189,12 @@ class IDCard {
     return birthStr;
   }
 
-  /** ¸ù¾İÉí·İÖ¤ºÅ»ñÈ¡³öÉúµØ */
+  /** æ ¹æ®èº«ä»½è¯å·è·å–å‡ºç”Ÿåœ° */
   area(): string {
     return areaID[parseInt(this.idcode.substr(0, 2))] || "unknow";
   }
 
-  /** ¸ù¾İÉí·İÖ¤ºÅ»ñÈ¡ÄêÁä */
+  /** æ ¹æ®èº«ä»½è¯å·è·å–å¹´é¾„ */
   age(): number {
     const birthStr = this.birthday();
     const r = birthStr.match(/^(\d{4})-(\d{1,2})-(\d{1,2})$/);
@@ -211,7 +211,7 @@ class IDCard {
     return 0;
   }
 
-  /** ½âÎöÉí·İÖ¤ĞÅÏ¢ */
+  /** è§£æèº«ä»½è¯ä¿¡æ¯ */
   parse() {
     const info = this.check();
     if (!info.status) return info;
