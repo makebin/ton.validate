@@ -1,7 +1,8 @@
 import required from './required/index'
 import between from './between/index'
-
-export {
+import { RuleMap } from '../types/rule'
+const builtinRules: RuleMap = {
   required,
-  between
+  between,
 }
+export default builtinRules
